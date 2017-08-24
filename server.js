@@ -58,6 +58,7 @@ app.post('/sendEmail', function(req, res) {
     path: '/v3/mail/send',
     body: mail.toJSON()
   });
+  
   sg.API(request, function (error, response) {
     if (error) {
       //if error let sparkpost take over
