@@ -1,9 +1,6 @@
 var keys = require('./keys.js');
-console.log(keys);
 var sendGridAPI = keys.sendGridKeys.API;
-console.log(sendGridAPI);
 var sparkPostAPI = keys.sparkPostKeys.API
-console.log(sparkPostAPI);
 var express = require('express');
 
 
