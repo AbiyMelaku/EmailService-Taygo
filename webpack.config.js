@@ -35,6 +35,7 @@ module.exports = {
       Email: 'app/components/Email.jsx',
       EmailForm: 'app/components/EmailForm.jsx',
       EmailContents: 'app/components/EmailContents.jsx',
+      ErrorModal:  'app/components/ErrorModal.jsx',
       emailService: 'app/api/emailService.jsx',
       applicationStyles: 'app/styles/app.scss'
     },

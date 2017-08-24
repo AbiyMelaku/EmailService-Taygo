@@ -1,6 +1,7 @@
 var React = require('react');
 var EmailForm = require('EmailForm');
 var emailService = require('emailService');
+var ErrorModal = require('ErrorModal');
 
 var Email = React.createClass({
   getInitialState: function() {
@@ -20,7 +21,8 @@ var Email = React.createClass({
       to: emailObj.to,
       subject: emailObj.subject,
       message: emailObj.message ,
-      loading: true
+      loading: true,
+      errorMessage: null
     }),
     
     emailService.sendEmail(emailObj).then(function(response){
@@ -28,7 +30,8 @@ var Email = React.createClass({
       that.setState({
         loading: false
       })
-    }, function(errorMessage){
+    }, function(e){
+      this.setState
       console.log(errorMessage);
     })
   },
@@ -44,7 +47,7 @@ var Email = React.createClass({
     
     return (
       <div>
-        <h3> Welcome to the Modern PenPal &trade;</h3>
+        <h3> The Modern PenPal &trade;</h3>
         <EmailForm onSend={this.handleSend}/>
         {loadingMessage()}
       </div>
